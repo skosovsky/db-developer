@@ -32,10 +32,3 @@ SELECT title
            LEFT JOIN film_actor
                      USING (film_id)
  WHERE actor_id IS NULL;
-
--- имена исполнителей, у которых нет альбомов
-SELECT name
-  FROM artist
-           LEFT JOIN album
-                     USING (artist_id)
- WHERE album_id IS NULL;
